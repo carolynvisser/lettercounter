@@ -46,11 +46,8 @@ int main()
   for (i = 0; i < strlen(buffer); i++) {
     curchar = toupper(buffer[i]);
     if (curchar >= 65 && curchar <= 90) count[curchar - 65]++;
-<<<<<<< HEAD
     else other++;
-=======
     if (curchar == ' ') spaces++;
->>>>>>> origin/feature
   }
 
   // Create the letter analysis table
@@ -62,7 +59,6 @@ int main()
                                count[i],
                                (((float) count[i]) / strlen(buffer)) * 100);
   }
-<<<<<<< HEAD
   // Output the number of other characters
   printf("%-10s%-15d%-15.2f\n","Other",
                               other,
@@ -93,7 +89,6 @@ int main()
 
   return 0;
 }
-=======
   printf("\nTotal spaces: %d\n", spaces);
 
 
@@ -143,4 +138,3 @@ int min(int count[])
   }  
   return min_pos;
 }
->>>>>>> origin/feature
